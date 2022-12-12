@@ -16,15 +16,16 @@ public class CharacterSetButton : SingletonMonoBehaviour<CharacterSetButton>
     {
         base.Awake();
         _panel.SetActive(false);
-    }
-
-    public void SetPanel()
-    {
-        _panel.SetActive(!_panel.activeSelf);
+        GetComponent<Button>().onClick.AddListener(SetPanel);
     }
 
     public void SetCharacter(Character character)
     {
         _character = character;
+    }
+
+    private void SetPanel()
+    {
+        _panel.SetActive(!_panel.activeSelf);
     }
 }

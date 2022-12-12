@@ -5,34 +5,19 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public int Level => _level;
-
     public string Name => _name;
     public bool IsSetCharacter => _isSetCharacter;
 
-    [SerializeField]
     private string _name;
-
-    [SerializeField]
     private int _power;
-
-    [SerializeField]
     private int _defence;
-
-    [SerializeField]
     private int _speed;
-
-    [SerializeField]
     private int _hp;
-
-    [SerializeField]
     private int _mp;
-
-    [SerializeField]
     private int _exp;
-
-    [SerializeField]
     private int _level;
 
+    [SerializeField]
     private CharacterData _data;
     private bool _isSetCharacter = false;
 
@@ -56,50 +41,53 @@ public class Character : MonoBehaviour
 
     public void ChangeStatus(PlayerStatus status, int value)
     {
+        int changeValue = CheckState(status, value);
         switch (status)
         {
             case PlayerStatus.Power:
 
-                _power += CheckState(status, value);
+                _power += changeValue;
                 
                 break;
 
             case PlayerStatus.Defence:
                 
-                _defence += CheckState(status, value);
+                _defence += changeValue;
                 
                 break;
 
             case PlayerStatus.Speed:
                 
-                _speed += CheckState(status, value);
+                _speed += changeValue;
                 
                 break;
 
             case PlayerStatus.HP:
                 
-                _hp += CheckState(status, value);
+                _hp += changeValue;
                 
                 break;
 
             case PlayerStatus.MP:
                 
-                _mp += CheckState(status, value);
+                _mp += changeValue;
                 
                 break;
 
             case PlayerStatus.Exp:
                 
-                _exp += CheckState(status, value);
+                _exp += changeValue;
                 
                 break;
 
             case PlayerStatus.Level:
                 
-                _level += CheckState(status, value);
+                _level += changeValue;
                 
                 break;
         }
+
+        Debug.Log(status + "が" + changeValue + "アップした！");
     }
 
     private int CheckState(PlayerStatus status, int value)

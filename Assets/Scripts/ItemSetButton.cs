@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemSetButton : MonoBehaviour
 {
@@ -10,10 +11,11 @@ public class ItemSetButton : MonoBehaviour
     private void Awake()
     {
         _panel.SetActive(false);
+        GetComponent<Button>().onClick.AddListener(SetPanel);
     }
 
-    public void SetPanel()
+    private void SetPanel()
     {
-        _panel.SetActive(!_panel.activeSelf);
+        _panel.SetActive(!_panel.activeInHierarchy);
     }
 }
