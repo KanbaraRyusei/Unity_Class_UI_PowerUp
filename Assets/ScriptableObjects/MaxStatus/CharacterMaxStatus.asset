@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16aebe9f5d49cb443971e8c02b9bbe51, type: 3}
+  m_Name: CharacterMaxStatus
+  m_EditorClassIdentifier: 
+  _maxPower: 03000000050000000a0000000f00000019000000
+  _maxDefence: 03000000050000000a0000000f00000019000000
+  _maxSpeed: 03000000050000000a0000000f00000019000000
+  _maxHp: 03000000050000000a0000000f00000019000000
+  _maxMp: 03000000050000000a0000000f00000019000000
+  _maxExp: 03000000050000000a0000000f00000019000000
+  _maxLevel: 5
